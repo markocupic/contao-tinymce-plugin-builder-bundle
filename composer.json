@@ -27,6 +27,6 @@
     ]
   },
   "extra": {
-    "contao-manager-plugin": "Markocupic\\ContaoNewsInfiniteScrollBundle\\ContaoManager\\Plugin"
+    "contao-manager-plugin": "Markocupic\\ContaoTinymcePluginBuilderBundle\\ContaoManager\\Plugin"
   }
 }
