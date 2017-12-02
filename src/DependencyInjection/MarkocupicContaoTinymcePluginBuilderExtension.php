@@ -10,10 +10,10 @@ use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
 
 /**
- * Class ContaoTinymcePluginBuilderExtension
+ * Class MarkocupicContaoTinymcePluginBuilderExtension
  * @package Markocupic\ContaoTinymcePluginBuilderBundle\DependencyInjection
  */
-class ContaoTinymcePluginBuilderExtension extends Extension
+class MarkocupicContaoTinymcePluginBuilderExtension extends Extension
 {
     /**
      * {@inheritdoc}
