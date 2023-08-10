@@ -9,7 +9,12 @@
 
 if ($GLOBALS['TL_CONFIG']['useRTE'])
 {
-    // Modify tinymce.init method in template before sending the output to the browser
-    $GLOBALS['TL_HOOKS']['outputFrontendTemplate'][] = array('Markocupic\ContaoTinymcePluginBuilderBundle\TinymcePluginBuilder', 'outputTemplate');
-    $GLOBALS['TL_HOOKS']['outputBackendTemplate'][] = array('Markocupic\ContaoTinymcePluginBuilderBundle\TinymcePluginBuilder', 'outputTemplate');
+    if ( \version_compare(VERSION,'4.10.0','>=') ) {    // template modifizieren tinymcs 5
+        $GLOBALS['TL_HOOKS']['parseBackendTemplate'][] = array('Markocupic\ContaoTinymcePluginBuilderBundle\TinymcePluginBuilder', 'myParseTemplate');
+        $GLOBALS['TL_HOOKS']['parseFrontendTemplate'][] = array('Markocupic\ContaoTinymcePluginBuilderBundle\TinymcePluginBuilder', 'myParseTemplate');
+    } else {
+        $GLOBALS['TL_HOOKS']['outputFrontendTemplate'][] = array('Markocupic\ContaoTinymcePluginBuilderBundle\TinymcePluginBuilder', 'outputTemplate');
+        $GLOBALS['TL_HOOKS']['outputBackendTemplate'][] = array('Markocupic\ContaoTinymcePluginBuilderBundle\TinymcePluginBuilder', 'outputTemplate');
+    }
+  
 }

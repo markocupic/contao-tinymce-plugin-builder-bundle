@@ -11,10 +11,16 @@
     }
   ],
   "require": {
-    "php": "^5.6|^7.0",
-    "symfony/framework-bundle": "^3.3",
-    "contao/core-bundle": "^4.4.2"
+    "php": "^7.0|^8",
+     "contao/core-bundle": "^4.4.2"
   },
+    "repositories": [
+    {
+      "type": "path",
+      "url": "C:\\wampneu\\www\\co4\\Github Bundles\\contao-tinymce-plugin-builder-bundle"
+    }
+  ],
+
   "autoload": {
     "psr-4": {
       "Markocupic\\ContaoTinymcePluginBuilderBundle\\": "src/"
