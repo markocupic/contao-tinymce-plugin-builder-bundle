@@ -24,7 +24,7 @@
             "Markocupic\\ContaoTinymcePluginBuilderBundle\\": "src/"
         },
         "classmap": [
-            "src/contao/classes/"
+            "contao/classes/"
         ]
     },
     "extra": {
