@@ -1,35 +1,35 @@
 <?php
-/**
- * @copyright  Marko Cupic 2017 <m.cupic@gmx.ch>
- * @author     Marko Cupic
- * @package    Contao News Infinite Scroll Bundle Bundle
- * @license    LGPL-3.0+
- * @see	       https://github.com/markocupic/contao-news-infinite-scroll-bundle
+
+declare(strict_types=1);
+
+/*
+ * This file is part of Contao TinyMCE Plugin Builder Bundle.
  *
+ * (c) Marko Cupic 2023 <m.cupic@gmx.ch>
+ * @license GPL-3.0-or-later
+ * For the full copyright and license information,
+ * please view the LICENSE file that was distributed with this source code.
+ * @link https://github.com/markocupic/contao-tinymce-plugin-builder-bundle
  */
+
 namespace Markocupic\ContaoTinymcePluginBuilderBundle\ContaoManager;
 
-use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
+use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
+use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
+use Markocupic\ContaoTinymcePluginBuilderBundle\MarkocupicContaoTinymcePluginBuilderBundle;
 
-/**
- * Plugin for the Contao Manager.
- *
- * @author Marko Cupic
- */
 class Plugin implements BundlePluginInterface
 {
     /**
      * {@inheritdoc}
      */
-    public function getBundles(ParserInterface $parser)
+    public function getBundles(ParserInterface $parser): array
     {
         return [
-            BundleConfig::create('Markocupic\ContaoTinymcePluginBuilderBundle\MarkocupicContaoTinymcePluginBuilderBundle')
-                ->setLoadAfter([
-                  'Contao\CoreBundle\ContaoCoreBundle',
-                ])
+            BundleConfig::create(MarkocupicContaoTinymcePluginBuilderBundle::class)
+                ->setLoadAfter([ContaoCoreBundle::class]),
         ];
     }
 }
