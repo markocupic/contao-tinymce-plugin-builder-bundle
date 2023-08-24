@@ -6,7 +6,7 @@ Der Modul modifiziert das javascript des aktuellen tinyMCE Templates.
 
 Die Konfiguration erfolgt im eigenen Package welches diese Extension als Basis benutzt.
 
-Dies geschieht in config.php (bundle/src/Resources/config.php) durch `$GLOBALS`
+Dies geschieht in der `config.php`  (vendor/my-tinymce-plugin-bundle/contao/config.php) durch `$GLOBALS`
 
 Beispiel:
 ```php
