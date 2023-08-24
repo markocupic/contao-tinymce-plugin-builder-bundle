@@ -16,9 +16,10 @@ namespace Markocupic\ContaoTinymcePluginBuilderBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-/**
- * Configures the contao tinymce plugin builder bundle.
- */
 class MarkocupicContaoTinymcePluginBuilderBundle extends Bundle
 {
+    public function getPath(): string
+    {
+        return \dirname(__DIR__);
+    }
 }
