@@ -38,7 +38,7 @@ class ParseTemplateListener
 
         $this->strBuffer = $strBuffer;
 
-        $arrKeys = ['plugins', 'toolbar', 'content_css'];
+        $arrKeys = ['plugins', 'toolbar', 'content_css','extended_valid_elements'];
 
         foreach ($arrKeys as $key) {
             $regexMatch = sprintf(self::REGEX_MATCH, $key);
@@ -91,7 +91,9 @@ class ParseTemplateListener
                         }
 
                         // content_css
-                        if ('content_css' === $key) {
+                        //if ('content_css' === $key) {
+                        // content_css extended_valid_elements  komma separated
+                        if ('content_css' === $key || 'extended_valid_elements' === $key) {
                             // Plugins are separated by commas
                             $aPlugins = preg_split('/\\s*,\\s*/', $oldValue);
 

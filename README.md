@@ -23,6 +23,9 @@ Beispiel:
     // Add a content_css in tinymce editor
     $GLOBALS['TINYMCE']['SETTINGS']['CONTENT_CSS'][] = 'my_plugin.css';
 
+    // Add a ,'extended_valid_elements' in tinymce editor z.B. for fontawesome
+    $GLOBALS['TINYMCE']['SETTINGS']['EXTENDED_VALID_ELEMENTS'][] = 'i[*]';
+
     // Ein eigener Schlüssel wird durch
     $GLOBALS['TINYMCE']['SETTINGS']['CONFIG_ROW']['myKey'] = 'myKeyValue';
 
